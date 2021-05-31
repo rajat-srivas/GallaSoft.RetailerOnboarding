@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  gallasoft.retaileronboardingapi:
+    image: ${DOCKER_REGISTRY-}gallasoft
+    build:
+      context: .
+      dockerfile: GallaSoft.RetailerOnboardingAPI/Dockerfile
