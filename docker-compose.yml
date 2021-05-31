@@ -1,8 +1,22 @@
 version: '3.4'
 
 services:
+
+  db:
+   image: "mcr.microsoft.com/azure-sql-edge"
+   container_name: sql-server-db
+   ports:
+      - 1433:1433
+   environment:
+      - SA_PASSWORD=MyPass@word
+      - MSSQL_PID=Developer
+      - ACCEPT_EULA='Y'
+    
+
   gallasoft.retaileronboardingapi:
     image: ${DOCKER_REGISTRY-}gallasoft
     build:
       context: .
       dockerfile: GallaSoft.RetailerOnboardingAPI/Dockerfile
+    depends_on:
+      - db

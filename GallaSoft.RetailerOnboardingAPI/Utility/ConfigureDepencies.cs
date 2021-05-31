@@ -1,10 +1,15 @@
 ﻿using System;
+using GallaSoft.RetailerOnboardingAPI.DBContent;
+using GallaSoft.RetailerOnboardingAPI.Repository;
+using Microsoft.Extensions.DependencyInjection;
+
 namespace GallaSoft.RetailerOnboardingAPI.Utility
 {
-    public class ConfigureDepencies
+    public  static class ConfigureDependencies
     {
-        public ConfigureDepencies()
+        public static void AddDependencies(this IServiceCollection service)
         {
+            service.AddScoped<IRetailerService, RetailerService>();
         }
     }
 }

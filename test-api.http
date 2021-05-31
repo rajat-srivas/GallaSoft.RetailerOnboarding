@@ -1,0 +1,51 @@
+
+### Onboard new retailer
+Post https://localhost:5001/api/retailer/onboard HTTP/1.1
+content-type: application/json
+
+{
+  "retailer": {
+    "companyName": "Facebook Ltd",
+    "contactFirstName": "Mark",
+    "contactLastName": "Zukernberg",
+    "emailAddress": "mark@facebook.com"
+  },
+  "address": {
+    "contactAddress": "Twin Poral",
+    "contactAddress2": "42 Sink",
+    "contactCity": "Miami",
+    "contactState": "Florida",
+    "pincode": 890283
+  }
+}
+
+### Get Retailer By ID
+GET https://localhost:5001/api/retailer/2 HTTP/1.1
+content-type: application/json
+
+### Get Retailer By GUID
+GET https://localhost:5001/api/retailer/guid?guid=5e5ec4f7-98f7-43cb-b779-cb51ad680c04 HTTP/1.1
+content-type: application/json
+
+### Get Retailer status by GUID
+GET https://localhost:5001/api/retailer/status?guid=40256490-c827-467f-96e2-5f386d7f57dc HTTP/1.1
+content-type: application/json
+
+
+### Update Retailer (Address update not allowing as of now)
+PUT https://localhost:5001/api/retailer
+Content-Type: application/json
+
+{
+  "companyName": "Mozab Traders",
+  "contactFirstName": "Mozab",
+  "contactLastName": "Traders",
+  "emailAddress": "user@example.com",
+  "status": 2,
+  "retailerId": 2
+}
+
+### Update retailer status
+PUT https://localhost:5001/api/retailer/status/2?status=1
+content-type: application/json
+

@@ -1,10 +1,15 @@
 ﻿using System;
-namespace GallaSoft.RetailerOnboardingAPI.Model
+using GallaSoft.RetailerOnboardingAPI.Model;
+
+namespace GallaSoft.RetailerOnboardingAPI.ViewModels
 {
-    public class RetailerOnboard
+    public class RetailerVM
     {
-        public RetailerOnboard()
+        public RetailerVM()
         {
+
         }
+        public Retailer Retailer { get; set; }
+        public Address Address { get; set; }
     }
 }

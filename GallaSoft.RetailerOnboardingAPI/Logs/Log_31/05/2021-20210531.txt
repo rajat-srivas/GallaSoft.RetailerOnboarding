@@ -1,0 +1,72 @@
+2021-05-31T14:32:30.9579370+05:30  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-05-31T14:32:30.9644170+05:30  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-05-31T14:32:30.9670530+05:30  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-31T14:32:30.9676890+05:30  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-31T14:32:30.9679390+05:30  [INF] Content root path: "/Users/rajatsrivastava/Projects/GallaSoft.RetailerOnboardingAPI/GallaSoft.RetailerOnboardingAPI" (b5d60022)
+2021-05-31T14:33:41.5726210+05:30 0HM942B9HTKFQ:00000002 [INF] Onboarding new retailer Facebook Ltd (890babf8)
+2021-05-31T14:33:42.7891140+05:30 0HM942B9HTKFQ:00000002 [INF] Onbording completed (68ee774a)
+2021-05-31T14:34:31.5944020+05:30 0HM942B9HTKFR:00000002 [INF] Update retailer started... (3c794107)
+2021-05-31T14:34:31.9953440+05:30 0HM942B9HTKFR:00000002 [INF] Retailer updation completed for Mozab Traders (a299b08f)
+2021-05-31T11:42:56.2198264+00:00  [INF] Now listening on: "https://[::]:443" (d826f4b8)
+2021-05-31T11:42:56.2216701+00:00  [INF] Now listening on: "http://[::]:80" (d826f4b8)
+2021-05-31T11:42:56.2217561+00:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-31T11:42:56.2217724+00:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-31T11:42:56.2217838+00:00  [INF] Content root path: "/app" (b5d60022)
+2021-05-31T11:43:52.1217295+00:00 0HM9454TQC62N:0000000F [ERR] Failed executing DbCommand ("18"ms) [Parameters=["@__id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[RetailerId], [r].[AddressId], [r].[AssetDirectory], [r].[CompanyName], [r].[ContactFirstName], [r].[ContactLastName], [r].[EmailAddress], [r].[RetailerGuid], [r].[Status]
+FROM [Retailers] AS [r]
+WHERE [r].[RetailerId] = @__id_0" (627a98df)
+2021-05-31T11:43:52.1489315+00:00 0HM9454TQC62N:0000000F [ERR] An exception occurred while iterating over the results of a query for context type '"GallaSoft.RetailerOnboardingAPI.DBContent.RetailerContextDb"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Retailers'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:b4039176-f3ce-422a-a973-b32ba586f150
+Error Number:208,State:1,Class:16" (f5c7ac34)
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Retailers'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:b4039176-f3ce-422a-a973-b32ba586f150
+Error Number:208,State:1,Class:16
+2021-05-31T11:43:52.1599722+00:00 0HM9454TQC62N:0000000F [ERR]    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at GallaSoft.RetailerOnboardingAPI.Repository.RetailerService.GetRetailerById(Int32 id) in /Users/rajatsrivastava/Projects/GallaSoft.RetailerOnboardingAPI/GallaSoft.RetailerOnboardingAPI/Repository/RetailerService.cs:line 27
+Invalid object name 'Retailers'. (ebf97122)
+2021-05-31T11:50:49.5265358+00:00  [INF] Now listening on: "https://[::]:443" (d826f4b8)
+2021-05-31T11:50:49.5284335+00:00  [INF] Now listening on: "http://[::]:80" (d826f4b8)
+2021-05-31T11:50:49.5286617+00:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-05-31T11:50:49.5286905+00:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-05-31T11:50:49.5289395+00:00  [INF] Content root path: "/app" (b5d60022)
+2021-05-31T11:52:31.3500813+00:00 0HM9459ARTTCI:00000002 [INF] Onboarding new retailer Facebook Ltd (890babf8)
+2021-05-31T11:52:31.4839404+00:00 0HM9459ARTTCI:00000002 [INF] Onbording completed (68ee774a)
