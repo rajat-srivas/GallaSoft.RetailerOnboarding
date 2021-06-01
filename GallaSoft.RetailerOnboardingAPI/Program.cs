@@ -36,7 +36,7 @@ namespace GallaSoft.RetailerOnboardingAPI
                 throw;
             }
 
-            await host.RunAsync();
+                await host.RunAsync();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
